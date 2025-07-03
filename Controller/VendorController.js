@@ -47,7 +47,7 @@ export const VendorLogin = async(req, res)=>{
 export const getallVendors = async(req, res)=>{
     try{
         const vendors = await Vendor.find().populate("firm");
-        res.status(200).json(vendors);
+        res.status(200).json({vendors: vendors});
     }catch(error){
         console.error(error);
         res.status(500).json({message:"Internal server error"});
