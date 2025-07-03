@@ -20,7 +20,7 @@ db.on("error", ()=>{
     console.log("error connecting to database", error.message);
 })
 
-const Port = 4000;
+const Port = process.env.PORT || 4000;
 app.listen(Port, ()=>{
     console.log(`Server is running on port ${Port}`);
 });
@@ -30,6 +30,6 @@ app.use("/firm", FirmRoutes);
 app.use("/product", ProductRoutes);
 app.use("/uploads", express.static('uploads'));
 
-app.use("/home", (req, res)=>{
+app.use("/", (req, res)=>{
     res.send("Welcome to QuickBite");
 });
