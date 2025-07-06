@@ -14,3 +14,4 @@ router.get("/uploads/:imageName",(req, res)=>{
 router.delete("/delete/:productId", ProductController.deleteProductById)
 
 export default router;
+ 

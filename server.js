@@ -5,9 +5,11 @@ import VendorRoutes from "./Routes/VendorRoutes.js";
 import FirmRoutes from "./Routes/FirmRoutes.js"
 import ProductRoutes from "./Routes/ProductRoutes.js"
 import path from "path"
+import cors from "cors"
 
 const app = new express();
 dotenv.config();
+app.use(cors());
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI);
