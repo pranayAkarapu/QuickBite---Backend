@@ -22,7 +22,7 @@ const ProductSchema = mongoose.Schema({
         type: String
     },
     description:{
-        type:String
+        type:Boolean
     },
     firm:[{
         type: mongoose.Schema.Types.ObjectId,
