@@ -19,10 +19,10 @@ const ProductSchema = mongoose.Schema({
         type:String
     },
     bestseller:{
-        type: String
+        type: Boolean
     },
     description:{
-        type:Boolean
+        type:String
     },
     firm:[{
         type: mongoose.Schema.Types.ObjectId,
