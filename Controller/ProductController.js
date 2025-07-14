@@ -1,6 +1,7 @@
 import Firm from "../Models/FirmShema.js";
 import Product from "../Models/ProductSchema.js";
 import multer from "multer"
+import path from "path";
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
